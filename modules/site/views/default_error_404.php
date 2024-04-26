@@ -3,7 +3,6 @@
     404 page
 =======================*/
     .page_404 {
-        padding: 40px 0;
         background: #fff;
         font-family: 'Arvo', serif;
     }
@@ -25,7 +24,7 @@
         margin-top: -50px;
     }
 </style>
-<section class="page_404">
+<section class="page_404" align="center">
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
@@ -39,7 +38,7 @@
                     </h3>
                     <p style="text-align:center">the page you are looking for not avaible!</p>
                     <div class="btn-wrapper btn-wrapper2">
-                    <a href="{base_url}" class="btn btn-outline-success"><span>
+                    <a href="{base_url}" class="color-overlay-button"><span>
                         <i class="fa fa-home"></i>
                         Go to Home</span></a>
                     </div>

@@ -268,6 +268,9 @@ class Site_Controller extends MY_Controller
             $this->pageData = $items['all_pages_link'][$index];
             $this->set_data('page_name', $this->pageData['label']);
         }
+        else{
+            $this->set_data('isPrimary',false);
+        }
         $this->init_setting();
         $this->set_data('head', $this->parse('head', [], true));
     }

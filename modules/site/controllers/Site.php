@@ -20,6 +20,7 @@ class Site extends Site_Controller
     {
         $data = $this->pageData;
         $return = ['page_name' => $data['label'], 'content' => '', 'isPrimary' => (DefaultPage == $data['id'])];
+      
         $pageSchema = $this->SiteModel->get_page_schema($data['id']);
         if ($pageSchema->num_rows()) {
             $html = '';
