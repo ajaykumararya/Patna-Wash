@@ -150,9 +150,10 @@ function ES($type, $defaultTExt = null)
     return $ci->SiteModel->get_setting($type);
 }
 
-function logo(){
+function logo()
+{
     $ci = &get_instance();
-    return base_url('upload/'.$ci->SiteModel->get_setting('logo'));
+    return base_url('upload/' . $ci->SiteModel->get_setting('logo'));
 }
 
 function cms_content_form($type)
@@ -208,5 +209,39 @@ function generateCouponCode($length = 8)
     }
 
     return $couponCode;
+}
+
+function getTimeDifference($startDateTime, $endDateTime = true)
+{
+    $start = new DateTime($startDateTime);
+    $endDateTime = $endDateTime === true ? date('Y-m-d H:i:s') : $endDateTime;
+    $end = new DateTime($endDateTime);
+    $interval = $start->diff($end);
+
+    $result = '';
+    if ($interval->y > 0) {
+        $result .= $interval->y . ' years ';
+    }
+    else if ($interval->m > 0) {
+        $result .= $interval->m . ' months ';
+    }
+    else     if ($interval->d > 0) {
+        $result .= $interval->d . ' days ';
+    }
+    else     if ($interval->h > 0) {
+        $result .= $interval->h . ' hours ';
+    }
+    else     if ($interval->i > 0) {
+        $result .= $interval->i . ' minutes ';
+    }
+    else     if ($interval->s > 0) {
+        $result .= $interval->s . ' seconds ';
+    }
+
+    if (empty($result)) {
+        $result = '0 seconds';
+    }
+
+    return $result;
 }
 ?>

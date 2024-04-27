@@ -215,5 +215,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
         })
     }
 
-    
+    $("input[type=range]").on("input", function(){
+        console.log(this.value);
+		var leter = $("input[type=range]").val()
+		$("span.star").text(leter)
+    });
+    if($("input[type=range]").length){
+        $("input[type=range]").val(4);
+        $("span.star").text(4);
+    }
+
 });

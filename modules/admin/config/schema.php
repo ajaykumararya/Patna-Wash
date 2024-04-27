@@ -1,7 +1,6 @@
 <?php
-require FCPATH.'modules/form/config/forms.php';
 // $config['schema_vars'] = $configItems;
-$config = $config['forms'];
+$config = [];
 $config['page'] = 'Static Page';
 $config['form'] = 'Form';
 $config['content'] = 'Page Content';

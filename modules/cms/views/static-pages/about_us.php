@@ -62,27 +62,5 @@
         </form>
     </div>
 
-    <div class="col-md-6 mt-4">
-        <form action="" class="extra-setting">
-            <div class="{card_class}">
-                <div class="card-header">
-                    <h3 class="card-title">Update Button</h3>
-                </div>
-                <div class="card-body">
-                <div class="form-group">
-                        <label for="" class="form-label">Button Text</label>
-                        <input class="form-control" name="about_us_page_button_text" value="<?=$this->SiteModel->get_setting('about_us_page_button_text')?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="form-label">Button Link</label>
-                        <input class="form-control" name="about_us_page_button_link" value="<?=$this->SiteModel->get_setting('about_us_page_button_link','#')?>">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    {save_button}
-                </div>
-            </div>
-        </form>
-    </div>
 
 </div>

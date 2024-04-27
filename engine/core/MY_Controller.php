@@ -9,7 +9,6 @@ class MY_Controller extends MX_Controller
         parent::__construct();
 
         $this->load->library('common/ki_theme');
-        $this->load->config('form/forms');
         // exit(THEME_ID);
         if (file_exists(THEME_PATH . 'config.php') and !defined('theme_config')) {
             // ob_start();
