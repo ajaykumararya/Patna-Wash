@@ -1,6 +1,6 @@
 <section
     class="elementor-section elementor-top-section elementor-element elementor-element-a7daa3b elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
-    data-id="a7daa3b" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+    data-id="a7daa3b" style="margin-top:11px" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
     <div class="elementor-container elementor-column-gap-default">
 
         <?php
