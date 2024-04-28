@@ -16,12 +16,12 @@ $config['cms_setting'] = array(
             'icon' => array('setting-2', 4),
             'url' => 'cms/setting'
         ),
-        array(
-            'label' => 'Gallery Image',
-            'type' => 'gallery_setting',
-            'icon' => array('picture', 4),
-            'url' => 'cms/gallery-images'
-        ),
+        // array(
+        //     'label' => 'Gallery Image',
+        //     'type' => 'gallery_setting',
+        //     'icon' => array('picture', 4),
+        //     'url' => 'cms/gallery-images'
+        // ),
         array(
             'label' => 'Slider',
             'type' => 'slider_setting',

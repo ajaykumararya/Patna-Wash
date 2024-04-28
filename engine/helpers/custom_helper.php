@@ -244,4 +244,7 @@ function getTimeDifference($startDateTime, $endDateTime = true)
 
     return $result;
 }
+function convertStringToH2($string) {
+    return "<h2>" . $string . "</h2>";
+}
 ?>

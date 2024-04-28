@@ -4468,16 +4468,27 @@ flexibility(document.documentElement);
                             <div class="elementor-widget-container">
                                 <div class="wpr-page-list-wrap">
                                     <ul class="wpr-page-list">
-                                        <li
-                                            class="wpr-page-list-item elementor-repeater-item-9f1d5d1 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                            <div><a class="wpr-no-pointer" href=dry-cleaner-near-me/
-                                                    target=_blank>About Us</a></div>
-                                        </li>
-                                        <li
-                                            class="wpr-page-list-item elementor-repeater-item-09e31d8 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                            <div><a class="wpr-no-pointer" href=contact-us/
-                                                    target=_blank>Contact</a></div>
-                                        </li>
+                                        <?php
+                                        $header_sections = $this->ki_theme->config('header_sections');
+                                        if ($header_sections) {
+                                            foreach ($header_sections as $index => $title) {
+                                                // $myTitle = $this->SiteModel->get_setting($index . '_text', $title);
+                                                $fields = $this->SiteModel->get_setting($index . '_links', '', true);
+                                                if ($fields) {
+                                                    foreach ($fields as $value) {
+                                                        $my_index = $this->ki_theme->parse_string($value->title);
+                                                        $value = $value->link;
+                                                        echo "<li
+                                            class='wpr-page-list-item elementor-repeater-item-9f1d5d1 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade'>
+                                            <div><a class='wpr-no-pointer' href='$value'
+                                                    target=_blank>$my_index</a></div>
+                                        </li>";
+                                                        // echo "<li><a href='$value' target='_blank'><span>$my_index</span></a></li>";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
@@ -4818,13 +4829,13 @@ flexibility(document.documentElement);
                                 <div class="elementor-social-icons-wrapper elementor-grid">
                                     <span class="elementor-grid-item">
                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-ae880e4"
-                                            href="https://www.facebook.com/Mr.JohnnyCare/" target="_blank">
+                                            href="{facebook}" target="_blank">
                                             <span class="elementor-screen-only">Facebook-f</span>
                                             <i class="fab fa-facebook-f"></i> </a>
                                     </span>
                                     <span class="elementor-grid-item">
                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-cc98f01"
-                                            href="https://www.instagram.com/mrjohnnycare/" target="_blank">
+                                            href="{instagram}" target="_blank">
                                             <span class="elementor-screen-only">Instagram</span>
                                             <i class="fab fa-instagram"></i> </a>
                                     </span>
@@ -4856,8 +4867,7 @@ flexibility(document.documentElement);
 
                                     <picture class="wpr-logo-image">
 
-                                        <img src="{base_url}upload/{logo}"
-                                            alt="">
+                                        <img src="{base_url}upload/{logo}" alt="">
 
                                         <a class="wpr-logo-url" rel="home" href=""></a>
                                     </picture>
@@ -4965,10 +4975,18 @@ flexibility(document.documentElement);
                                 </style>
 
                                 <div id="uc_color_overlay_button_elementor_c332b0d" class="color-overlay-button">
-                                    <a href="contact-us/" class="color-overlay-link ">
-                                        <span class="ue-color-overlay"></span>
-                                        <span class="ue-btn-txt">Place Order</span>
-                                    </a>
+                                    <?php
+                                    $menu_extra_button = ES('menu_extra_button_text');
+                                    if ($menu_extra_button) {
+                                        ?>
+
+                                        <a href="<?= ES('menu_extra_button_link') ?>" class="color-overlay-link ">
+                                            <span class="ue-color-overlay"></span>
+                                            <span class="ue-btn-txt"><?= $menu_extra_button ?></span>
+                                        </a>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                                 <!-- end Overlay Button -->
                             </div>
@@ -4980,7 +4998,7 @@ flexibility(document.documentElement);
     </div>
 
     <?php
-    if ($isPrimary){
+    if ($isPrimary) {
         ?>
         <div id="content" class="site-content">
             <div class="ast-container">
@@ -9480,19 +9498,14 @@ flexibility(document.documentElement);
                                                     <div
                                                         class='fluentform ff-default fluentform_wrapper_1 ffs_default_wrap'>
                                                         <form data-form_id="1" id="fluentform_1"
-                                                            class="frm-fluent-form fluent_form_1 ff-el-form-top ff_form_instance_1_1 ff-form-loading ffs_default"
+                                                            class="frm-fluent-form submit-enquiry-form fluent_form_1 ff-el-form-top ff_form_instance_1_1 ff-form-loading ffs_default"
                                                             data-form_instance="ff_form_instance_1_1" method="POST">
                                                             <fieldset
                                                                 style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
                                                                 <legend class="ff_screen_reader_title"
                                                                     style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
-                                                                    Contact Form</legend><input type='hidden'
-                                                                    name='__fluent_form_embded_post_id'
-                                                                    value='7' /><input type="hidden"
-                                                                    id="_fluentform_1_fluentformnonce"
-                                                                    name="_fluentform_1_fluentformnonce"
-                                                                    value="e85f5c3102" /><input type="hidden"
-                                                                    name="_wp_http_referer" value="/" />
+                                                                    Contact Form</legend>
+                                                                    
                                                                 <div data-type="name-element" data-name="names"
                                                                     class=" ff-field_container ff-name-field-wrapper">
                                                                     <div class='ff-t-container'>
@@ -9506,7 +9519,8 @@ flexibility(document.documentElement);
                                                                                 </div>
                                                                                 <div class='ff-el-input--content'>
                                                                                     <input type="text"
-                                                                                        name="names[first_name]"
+                                                                                        required
+                                                                                        name="name"
                                                                                         id="ff_1_names_first_name_"
                                                                                         class="ff-el-form-control"
                                                                                         placeholder="First Name"
@@ -9525,7 +9539,7 @@ flexibility(document.documentElement);
                                                                                 </div>
                                                                                 <div class='ff-el-input--content'>
                                                                                     <input type="text"
-                                                                                        name="names[last_name]"
+                                                                                        name="last_name"
                                                                                         id="ff_1_names_last_name_"
                                                                                         class="ff-el-form-control"
                                                                                         placeholder="Last Name"
@@ -9556,9 +9570,10 @@ flexibility(document.documentElement);
                                                                             Number</label>
                                                                     </div>
                                                                     <div class='ff-el-input--content'><input
-                                                                            type="number" name="numeric-field"
+                                                                            type="number" name="mobile"
                                                                             id="ff_1_numeric-field"
                                                                             class="ff-el-form-control"
+                                                                            required
                                                                             placeholder="Phone Number"
                                                                             data-name="numeric-field"
                                                                             inputmode="numeric" step="any"
@@ -9587,6 +9602,7 @@ flexibility(document.documentElement);
                                                                             aria-invalid="false" aria-required=true
                                                                             name="message" id="ff_1_message"
                                                                             class="ff-el-form-control"
+                                                                            required
                                                                             placeholder="Your Message" rows="4" cols="2"
                                                                             data-name="message"></textarea>
                                                                     </div>
@@ -9603,9 +9619,6 @@ flexibility(document.documentElement);
                                                             class='ff-errors-in-stack ff_form_instance_1_1 ff-form-loading_errors ff_form_instance_1_1_errors'>
                                                         </div>
                                                     </div>
-                                                    <script type="text/javascript">
-                                                        window.fluent_form_ff_form_instance_1_1 = { "id": "1", "settings": { "layout": { "labelPlacement": "top", "helpMessagePlacement": "with_label", "errorMessagePlacement": "inline", "cssClassName": "", "asteriskPlacement": "asterisk-right" }, "restrictions": { "denyEmptySubmission": { "enabled": false } } }, "form_instance": "ff_form_instance_1_1", "form_id_selector": "fluentform_1", "rules": { "names[first_name]": { "required": { "value": false, "message": "This field is required" } }, "names[middle_name]": { "required": { "value": false, "message": "This field is required" } }, "names[last_name]": { "required": { "value": false, "message": "This field is required" } }, "email": { "required": { "value": false, "message": "This field is required" }, "email": { "value": true, "message": "This field must contain a valid email" } }, "numeric-field": { "required": { "value": true, "message": "This field is required" }, "numeric": { "value": true, "message": "This field must contain numeric value" }, "min": { "value": "", "message": "Minimum value is " }, "max": { "value": "", "message": "Maximum value is " }, "digits": { "value": "", "message": "The number of digits has to be " } }, "subject": { "required": { "value": false, "message": "This field is required" } }, "message": { "required": { "value": true, "message": "This field is required" } } } };
-                                                    </script>
                                                 </div>
 
                                             </div>
@@ -9668,9 +9681,9 @@ flexibility(document.documentElement);
 
                                                     <picture class="wpr-logo-image">
 
-                                                        
-                                                            <img src="{base_url}upload/{logo}"
-                                            alt=""  style="margin-bottom:8px">
+
+                                                        <img src="{base_url}upload/{logo}" alt=""
+                                                            style="margin-bottom:8px">
 
                                                         <a class="wpr-logo-url" rel="home" href=""></a>
                                                     </picture>
@@ -9682,33 +9695,38 @@ flexibility(document.documentElement);
 
                                             </div>
                                         </div>
+
+
+
                                         <div class="elementor-element elementor-element-667c72b elementor-widget elementor-widget-heading"
                                             data-id="667c72b" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">We
-                                                    are the only Dry Cleaners in Lucknow</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    {footer_text_first}</h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-e34f9a1 elementor-widget elementor-widget-heading"
                                             data-id="e34f9a1" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">who
-                                                    are using</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">{footer_text}
+                                                </h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-5063143 elementor-widget elementor-widget-heading"
                                             data-id="5063143" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Eco
-                                                    Friendly Green Solvent Intense</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    {footer_text_end}</h2>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <section
+
+
+                                <!-- <section
                                     class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-184011c3"
                                     data-id="184011c3" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
@@ -9778,71 +9796,66 @@ flexibility(document.documentElement);
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-500c22c3"
-                                    data-id="500c22c3" data-element_type="column">
-                                    <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-6b002d7b elementor-widget elementor-widget-heading"
-                                            data-id="6b002d7b" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Our
-                                                    Services</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-023ea8c wpr-page-list-vertical wpr-pl-badge-center wpr-pl-icon-center elementor-widget elementor-widget-wpr-page-list"
-                                            data-id="023ea8c" data-element_type="widget"
-                                            data-widget_type="wpr-page-list.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="wpr-page-list-wrap">
-                                                    <ul class="wpr-page-list">
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-1270e62 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=washing-service/
-                                                                    target=_blank>Washing Service</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-eb9309e wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=dry-cleaning-in-lucknow/
-                                                                    target=_blank>Dry Cleaning</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-5a32d2e wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=shoe-cleaning-in-lucknow/
-                                                                    target=_blank>Shoe Cleaning</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-cb8eeb2 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=rug-cleaning-in-lucknow/
-                                                                    target=_blank>Rug Cleaning</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-6e0226a wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=steam-ironing-near-me-in-lucknow/
-                                                                    target=_blank>Steam Ironing</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-73710c8 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer" href=laundromat/
-                                                                    target=_blank>Laundromat</a></div>
-                                                        </li>
-                                                        <li
-                                                            class="wpr-page-list-item elementor-repeater-item-e8ca029 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
-                                                            <div><a class="wpr-no-pointer"
-                                                                    href=all-dry-cleaning-services/
-                                                                    target=_blank>All Services</a></div>
-                                                        </li>
-                                                    </ul>
+                                </section> -->
+
+                                <?php
+                                $footer_sections = $this->ki_theme->config('footer_sections');
+                                if ($footer_sections) {
+                                    foreach ($footer_sections as $index => $title) {
+                                        $myTitle = $this->SiteModel->get_setting($index . '_text', $title);
+                                        ?>
+                                        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-500c22c3"
+                                            data-id="500c22c3" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-6b002d7b elementor-widget elementor-widget-heading"
+                                                    data-id="6b002d7b" data-element_type="widget"
+                                                    data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                            <?= $myTitle ?>
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-023ea8c wpr-page-list-vertical wpr-pl-badge-center wpr-pl-icon-center elementor-widget elementor-widget-wpr-page-list"
+                                                    data-id="023ea8c" data-element_type="widget"
+                                                    data-widget_type="wpr-page-list.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="wpr-page-list-wrap">
+                                                            <ul class="wpr-page-list">
+                                                                <?php
+                                                                $fields = $this->SiteModel->get_setting($index . '_links', '', true);
+                                                                if ($fields) {
+                                                                    foreach ($fields as $value) {
+                                                                        $my_index = $this->ki_theme->parse_string($value->title);
+                                                                        $value = $value->link;
+                                                                        // echo "<li><a href='$value'>$my_index</a></li>";
+                                                                        ?>
+                                                                        <li
+                                                                            class="wpr-page-list-item elementor-repeater-item-1270e62 wpr-pointer-none wpr-pointer-line-fx wpr-pointer-fx-fade">
+                                                                            <div><a class="wpr-no-pointer" href="<?= $value ?>"
+                                                                                    target=_blank><?= $my_index ?></a></div>
+                                                                        </li>
+                                                                        <?php
+                                                                    }
+                                                                }
+                                                                ?>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+
+
+
+
+
+
+
                                 <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-50d02967"
                                     data-id="50d02967" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
@@ -9858,8 +9871,7 @@ flexibility(document.documentElement);
                                             data-id="c46c066" data-element_type="widget"
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
-                                                <p>Vistar Ply Mart Bulding 3rd Floor Behind Vijaya Bank, Near
-                                                    CMS School Gomti Nagar, Lucknow, Uttar Pradesh 226010</p>
+                                                <p>{address}</p>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-e7e8d02 elementor-widget elementor-widget-heading"
@@ -9902,8 +9914,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-social-icons-wrapper elementor-grid">
                                                     <span class="elementor-grid-item">
                                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-ae880e4"
-                                                            href="https://www.facebook.com/Mr.JohnnyCare/"
-                                                            target="_blank">
+                                                            href="{facebook}" target="_blank">
                                                             <span class="elementor-screen-only">Facebook</span>
                                                             <i class="fab fa-facebook"
                                                                 style="<?= ((!$isPrimary) ? 'line-height: 1.9!important;padding-left: 35px!important;' : '') ?>"></i>
@@ -9911,8 +9922,7 @@ flexibility(document.documentElement);
                                                     </span>
                                                     <span class="elementor-grid-item">
                                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-cc98f01"
-                                                            href="https://www.instagram.com/mrjohnnycare/"
-                                                            target="_blank">
+                                                            href="{instagram}" target="_blank">
                                                             <span class="elementor-screen-only">Instagram</span>
                                                             <i class="fab fa-instagram"
                                                                 style="<?= ((!$isPrimary) ? 'line-height: 1.9!important;padding-left: 35px!important;' : '') ?>"></i>
@@ -9937,9 +9947,13 @@ flexibility(document.documentElement);
                                             data-id="6d594716" data-element_type="widget"
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
-                                                <p>© Copyright 2019 <a href="">mrjohnnycare.in </a>.
-                                                    All right reserved. Design and Developed by<a
-                                                        href="https://tapfortech.com/"> Tap For Tech </a>.</p>
+                                                <p>© Copyright 2019 <a href="">Domain.in </a>.
+                                                    All right reserved.
+                                                    <!-- Design and Developed by<a
+                                                        href="">  </a>. -->
+
+
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-963cef0 wpr-pc-btn-align-fixed-left wpr-pc-btn-align-fixed elementor-widget elementor-widget-wpr-phone-call"
@@ -10005,12 +10019,7 @@ flexibility(document.documentElement);
                                             <div class="elementor-widget-container">
                                                 <form class="wpr-form" method="post" name="New Form" page="Home"
                                                     page_id="7" novalidate>
-                                                    <input type="hidden" name="post_id" value="7" />
-                                                    <input type="hidden" name="form_id" value="be2596f" />
-                                                    <input type="hidden" name="referer_title"
-                                                        value="Home - Mr Johnny Care: Best Dry Cleaners in Lucknow" />
 
-                                                    <input type="hidden" name="queried_id" value="7" />
                                                     <div class="wpr-step-wrap"></div>
                                                     <div class="wpr-form-fields-wrap wpr-labels-">
                                                         <div
@@ -10164,7 +10173,7 @@ flexibility(document.documentElement);
     <script
         src="{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/js/lib/slick/slick.minc245.js?ver=1.8.1"
         id="wpr-slick-js"></script>
-   
+
     <script
         src="{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/js/lib/perfect-scrollbar/perfect-scrollbar.min70b1.js?ver=0.4.9"
         id="wpr-popup-scroll-js-js"></script>
@@ -10192,7 +10201,7 @@ flexibility(document.documentElement);
     <script data-cfasync="false"
         src="{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/js/frontend.mind110.js?ver=1.3.972"
         id="wpr-addons-js-js"></script>
-  
+
 
 </body>
 

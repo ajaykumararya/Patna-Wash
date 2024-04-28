@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group mb-4">
                         <label for="address" class="form-label required">Enter Address</label>
-                        <textarea name="address" id="address" class="form-control"
+                        <textarea name="address" id="address" class="form-control" rows="5"
                             placeholder="Enter Address"><?= $this->SiteModel->get_setting('address') ?></textarea>
                     </div>
                 </div>
@@ -151,24 +151,8 @@
         </form>
     </div>
 </div>
+
 <?php
-if (THEME == 'theme-03') {
-    echo '<div class="row mb-4 mt-4">
-            <div class="col-md-12">
-                <div class="alert alert-success d-flex align-items-center p-5 mb-10">
-                    <i class="ki-duotone ki-shield-tick fs-2hx text-success me-4"><span class="path1"></span><span class="path2"></span></i>                    <div class="d-flex flex-column">
-                        <h4 class="mb-1 text-success">This is an Information</h4>
-                        <span>
-                        If you put <code>{newicon}</code> in the title, you will get a blinking image in the output.
-                        <code>Example:- <img src="'.base_url('themes/newicon.gif').'"></code>
-                        </span>
-                    </div>
-                </div>
-            </div>    
-        </div>';
-}
-
-
 $header_sections = $this->ki_theme->config('header_sections');
 if ($header_sections) {
     ?>
@@ -274,8 +258,35 @@ if ($footer_sections) {
     <?php
 }
 ?>
-<!-- <div class="form-group bg-primary p-2 position-relative mb-4">
-                                <input type="text" placeholder="Enter Title" class="form-control br-none p-2">
-                                <input type="text" placeholder="Enter Value" class="form-control br-none p-2" autocomplete="off">
-                                <a href="javascript:;" class="btn btn-light-danger h-25px lh-0 w-100 br-none p-2"><i class="ki-outline ki-trash"></i> Delete</a>
-                            </div> -->
+
+<div class="row">
+    <div class="col-md-6 mt-5">
+        <form action="" class="extra-setting">
+            <div class="{card_class}">
+                <div class="card-header">
+                    <h3 class="card-title">Footer Text After Logo</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="" class="form-label">Top Text</label>
+                        <textarea name="footer_text_first" class="form-control"><?=
+                            ES('footer_text_first') ?></textarea>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="" class="form-label">Middle Text</label>
+                        <textarea name="footer_text" class="form-control"><?=
+                            ES('footer_text') ?></textarea>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="" class="form-label">Bottom Text</label>
+                        <textarea name="footer_text_end" class="form-control"><?=
+                            ES('footer_text_end') ?></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    {publish_button}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

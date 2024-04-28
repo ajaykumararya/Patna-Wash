@@ -23,7 +23,7 @@ if ($isPrimary) {
                         <section
                             class="elementor-section elementor-inner-section elementor-element elementor-element-ead48cc elementor-section-full_width elementor-section-height-min-height elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
                             data-id="ead48cc" data-element_type="section"
-                            data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:<?=str_replace('"','&quot;',json_encode($sliders))?>,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500,&quot;_ha_eqh_enable&quot;:false}">
+                            data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:<?= str_replace('"', '&quot;', json_encode($sliders)) ?>,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500,&quot;_ha_eqh_enable&quot;:false}">
                             <div class="elementor-background-overlay"></div>
                             <div class="elementor-container elementor-column-gap-no">
                                 <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-381b00f"
@@ -68,7 +68,7 @@ if ($isPrimary) {
                                                     }
                                                 </style>
                                                 <h1 class="elementor-heading-title elementor-size-default">
-                                                    Best Dry Cleaners in Lucknow</h1>
+                                                    {slider_title}</h1>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-99e7ecc wpr-fancy-text-clip wpr-advanced-text-style-animated wpr-animated-text-infinite-yes elementor-widget elementor-widget-wpr-advanced-text"
@@ -84,16 +84,20 @@ if ($isPrimary) {
                                                     <span class="wpr-anim-text wpr-anim-text-type-clip"
                                                         data-anim-duration="1000,2000" data-anim-loop="yes">
                                                         <span class="wpr-anim-text-inner">
-                                                            <b>Indira Nagar</b>
-                                                            <b>Gomti Nagar</b>
-                                                            <b>Gomti Nagar Extension</b>
+                                                            <?php
+                                                            $slider_locations = ES('slider_locations');
+                                                            if (strpos($slider_locations, ',')) {
+                                                                foreach (explode(',', $slider_locations) as $location)
+                                                                    echo '<b>' . $location . '</b>';
+                                                            } else
+                                                                echo "<b>$slider_locations</b>";
+                                                            ?>
                                                         </span>
                                                         <span class="wpr-anim-text-cursor">|</span>
                                                     </span>
 
 
                                                 </h2>
-
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-ab226c4 wpr-pc-btn-align-inline wpr-pc-btn-icon-left elementor-widget elementor-widget-wpr-phone-call"
