@@ -2750,12 +2750,7 @@
         --e-global-color-astglobalcolor8: #94a3b8;
     }
 </style>
-<link rel='stylesheet' id='bdt-uikit-css'
-    href='{theme_url}assets/wp-content/plugins/bdthemes-prime-slider-lite/assets/css/bdt-uikite7ad.css?ver=3.17.0'
-    media='all' />
-<link rel='stylesheet' id='prime-slider-site-css'
-    href='{theme_url}assets/wp-content/plugins/bdthemes-prime-slider-lite/assets/css/prime-slider-sitea1c3.css?ver=3.14.1'
-    media='all' />
+
 <style id='wp-emoji-styles-inline-css'>
     img.wp-smiley,
     img.emoji {
@@ -3323,8 +3318,7 @@
         line-height: 1.6;
     }
 </style>
-<link rel='stylesheet' id='elementor-frontend-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/css/frontend-lite.min1f75.css?ver=3.21.1' media='all' />
+
 <style id='elementor-frontend-inline-css'>
     @-webkit-keyframes ha_fadeIn {
         0% {
@@ -4193,73 +4187,13 @@
         background-color: #e2498a
     }
 </style>
-<link rel='stylesheet' id='eael-general-css'
-    href='{theme_url}assets/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min6129.css?ver=5.9.15'
-    media='all' />
-<link rel='stylesheet' id='eael-7-css'
-    href='{theme_url}assets/wp-content/uploads/essential-addons-elementor/eael-7c018.css?ver=1707836408' media='all' />
-<link rel='stylesheet' id='elementor-icons-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.mind54b.css?ver=5.29.0'
-    media='all' />
-<link rel='stylesheet' id='swiper-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min94a4.css?ver=8.4.5'
-    media='all' />
-<link rel='stylesheet' id='elementor-post-10-css'
-    href='{theme_url}assets/wp-content/uploads/elementor/css/post-107b45.css?ver=1711971132' media='all' />
-<link rel='stylesheet' id='font-awesome-5-all-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min1f75.css?ver=3.21.1'
-    media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min1f75.css?ver=3.21.1'
-    media='all' />
-<link rel='stylesheet' id='elementor-global-css'
-    href='{theme_url}assets/wp-content/uploads/elementor/css/global84ab.css?ver=1711971134' media='all' />
-<link rel='stylesheet' id='elementor-post-7-css'
-    href='{theme_url}assets/wp-content/uploads/elementor/css/post-784ab.css?ver=1711971134' media='all' />
-<link rel='stylesheet' id='elementor-post-36-css'
-    href='{theme_url}assets/wp-content/uploads/elementor/css/post-3684ab.css?ver=1711971134' media='all' />
-<link rel='stylesheet' id='happy-icons-css'
-    href='{theme_url}assets/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min651e.css?ver=3.10.6'
-    media='all' />
-<link rel='stylesheet' id='font-awesome-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min1849.css?ver=4.7.0'
-    media='all' />
-<link rel='stylesheet' id='eael-43-css'
-    href='{theme_url}assets/wp-content/uploads/essential-addons-elementor/eael-43c018.css?ver=1707836408' media='all' />
-<link rel='stylesheet' id='elementor-post-43-css'
-    href='{theme_url}assets/wp-content/uploads/elementor/css/post-4349de.css?ver=1711971135' media='all' />
-<link rel='stylesheet' id='wpr-text-animations-css-css'
-    href='{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/text-animations.mind110.css?ver=1.3.972'
-    media='all' />
-<link rel='stylesheet' id='wpr-addons-css-css'
-    href='{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/css/frontend.mind110.css?ver=1.3.972'
-    media='all' />
-<link rel='stylesheet' id='google-fonts-1-css'
-    href='https://fonts.googleapis.com/css?family=Open+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLato%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.5.2'
-    media='all' />
-<link rel='stylesheet' id='google-earlyaccess-2-css'
-    href='https://fonts.googleapis.com/earlyaccess/opensanshebrewe63c.css?ver=6.5.2' media='all' />
-<link rel='stylesheet' id='elementor-icons-shared-0-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3'
-    media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-solid-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3'
-    media='all' />
-<link rel='stylesheet' id='elementor-icons-shared-1-css'
-    href='{theme_url}assets/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min651e.css?ver=3.10.6'
-    media='all' />
-<link rel='stylesheet' id='elementor-icons-happy-icons-css'
-    href='{theme_url}assets/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min651e.css?ver=3.10.6'
-    media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-brands-css'
-    href='{theme_url}assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3'
-    media='all' />
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!--[if IE]>
-<script src="{theme_url}assets/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.6.11" id="astra-flexibility-js"></script>
+
+<script src="{theme_url}assets/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.6.11"
+    id="astra-flexibility-js"></script>
 <script id="astra-flexibility-js-after">
-flexibility(document.documentElement);
+    flexibility(document.documentElement);
 </script>
-<![endif]-->
+
 <script data-cfasync="false" src="{theme_url}assets/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1"
     id="jquery-core-js"></script>
 <script data-cfasync="false" src="{theme_url}assets/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1"
@@ -4347,20 +4281,6 @@ flexibility(document.documentElement);
     }
 </style>
 
-
-
-
-
-<link rel="icon"
-    href="{theme_url}assets/wp-content/uploads/2023/09/cropped-Untitled-design-4-e1693917662678-1-32x32.png"
-    sizes="32x32" />
-<link rel="icon"
-    href="{theme_url}assets/wp-content/uploads/2023/09/cropped-Untitled-design-4-e1693917662678-1-192x192.png"
-    sizes="192x192" />
-<link rel="apple-touch-icon"
-    href="{theme_url}assets/wp-content/uploads/2023/09/cropped-Untitled-design-4-e1693917662678-1-180x180.png" />
-<meta name="msapplication-TileImage"
-    content="{theme_url}assets/wp-content/uploads/2023/09/cropped-Untitled-design-4-e1693917662678-1-270x270.png" />
 <style id="wpr_lightbox_styles">
     .lg-backdrop {
         background-color: rgba(0, 0, 0, 0.6) !important;
@@ -9505,7 +9425,7 @@ flexibility(document.documentElement);
                                                                 <legend class="ff_screen_reader_title"
                                                                     style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
                                                                     Contact Form</legend>
-                                                                    
+
                                                                 <div data-type="name-element" data-name="names"
                                                                     class=" ff-field_container ff-name-field-wrapper">
                                                                     <div class='ff-t-container'>
@@ -9518,8 +9438,7 @@ flexibility(document.documentElement);
                                                                                         Name</label>
                                                                                 </div>
                                                                                 <div class='ff-el-input--content'>
-                                                                                    <input type="text"
-                                                                                        required
+                                                                                    <input type="text" required
                                                                                         name="name"
                                                                                         id="ff_1_names_first_name_"
                                                                                         class="ff-el-form-control"
@@ -9538,8 +9457,7 @@ flexibility(document.documentElement);
                                                                                         Name</label>
                                                                                 </div>
                                                                                 <div class='ff-el-input--content'>
-                                                                                    <input type="text"
-                                                                                        name="last_name"
+                                                                                    <input type="text" name="last_name"
                                                                                         id="ff_1_names_last_name_"
                                                                                         class="ff-el-form-control"
                                                                                         placeholder="Last Name"
@@ -9572,8 +9490,7 @@ flexibility(document.documentElement);
                                                                     <div class='ff-el-input--content'><input
                                                                             type="number" name="mobile"
                                                                             id="ff_1_numeric-field"
-                                                                            class="ff-el-form-control"
-                                                                            required
+                                                                            class="ff-el-form-control" required
                                                                             placeholder="Phone Number"
                                                                             data-name="numeric-field"
                                                                             inputmode="numeric" step="any"
@@ -9601,8 +9518,7 @@ flexibility(document.documentElement);
                                                                     <div class='ff-el-input--content'><textarea
                                                                             aria-invalid="false" aria-required=true
                                                                             name="message" id="ff_1_message"
-                                                                            class="ff-el-form-control"
-                                                                            required
+                                                                            class="ff-el-form-control" required
                                                                             placeholder="Your Message" rows="4" cols="2"
                                                                             data-name="message"></textarea>
                                                                     </div>
@@ -9975,8 +9891,11 @@ flexibility(document.documentElement);
             </div>
         </section>
     </div>
-    <div id="wpr-popup-id-233" class="wpr-template-popup" style="display:none">
-        <!-- data-settings='{&quot;popup_trigger&quot;:&quot;load&quot;,&quot;popup_load_delay&quot;:1,&quot;popup_scroll_progress&quot;:10,&quot;popup_inactivity_time&quot;:15,&quot;popup_element_scroll&quot;:&quot;&quot;,&quot;popup_custom_trigger&quot;:&quot;&quot;,&quot;popup_specific_date&quot;:&quot;2024-05-20 14:08&quot;,&quot;popup_stop_after_date&quot;:false,&quot;popup_stop_after_date_select&quot;:&quot;2024-04-21 14:08&quot;,&quot;popup_show_again_delay&quot;:&quot;60000&quot;,&quot;popup_disable_esc_key&quot;:false,&quot;popup_automatic_close_switch&quot;:false,&quot;popup_automatic_close_delay&quot;:10,&quot;popup_animation&quot;:&quot;fadeInDown&quot;,&quot;popup_animation_duration&quot;:1,&quot;popup_show_for_roles&quot;:&quot;&quot;,&quot;popup_show_via_referral&quot;:false,&quot;popup_referral_keyword&quot;:&quot;&quot;,&quot;popup_display_as&quot;:&quot;modal&quot;,&quot;popup_show_on_device&quot;:true,&quot;popup_show_on_device_mobile&quot;:true,&quot;popup_show_on_device_tablet&quot;:true,&quot;popup_disable_page_scroll&quot;:true,&quot;popup_overlay_disable_close&quot;:&quot;yes&quot;,&quot;popup_close_button_display_delay&quot;:0}'> -->
+    <?php
+    $filled = $this->session->has_userdata('enquiry_form') == false;
+    ?>
+    <div id="wpr-popup-id-233" class="wpr-template-popup"
+        data-settings='{&quot;popup_trigger&quot;:&quot;load&quot;,&quot;popup_load_delay&quot;:1,&quot;popup_scroll_progress&quot;:10,&quot;popup_inactivity_time&quot;:15,&quot;popup_element_scroll&quot;:&quot;&quot;,&quot;popup_custom_trigger&quot;:&quot;&quot;,&quot;popup_specific_date&quot;:&quot;2024-05-20 14:08&quot;,&quot;popup_stop_after_date&quot;:false,&quot;popup_stop_after_date_select&quot;:&quot;2024-04-21 14:08&quot;,&quot;popup_show_again_delay&quot;:&quot;60000&quot;,&quot;popup_disable_esc_key&quot;:false,&quot;popup_automatic_close_switch&quot;:false,&quot;popup_automatic_close_delay&quot;:10,&quot;popup_animation&quot;:&quot;fadeInDown&quot;,&quot;popup_animation_duration&quot;:1,&quot;popup_show_for_roles&quot;:&quot;&quot;,&quot;popup_show_via_referral&quot;:false,&quot;popup_referral_keyword&quot;:&quot;&quot;,&quot;popup_display_as&quot;:&quot;modal&quot;,&quot;popup_show_on_device&quot;:<?= $filled ?>,&quot;popup_show_on_device_mobile&quot;:<?= $filled ?>,&quot;popup_show_on_device_tablet&quot;:<?= $filled ?>,&quot;popup_disable_page_scroll&quot;:true,&quot;popup_overlay_disable_close&quot;:&quot;yes&quot;,&quot;popup_close_button_display_delay&quot;:0}'>
         <div class="wpr-template-popup-inner">
             <div class="wpr-popup-overlay"></div>
             <div class="wpr-popup-container">
@@ -9997,11 +9916,8 @@ flexibility(document.documentElement);
                                             data-id="7532ea81" data-element_type="widget"
                                             data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img width="476" height="350"
-                                                    src="{theme_url}assets/wp-content/uploads/2023/08/Untitled-design-4-e1691604684505.png"
-                                                    class="attachment-full size-full wp-image-38" alt=""
-                                                    srcset="{theme_url}assets/wp-content/uploads/2023/08/Untitled-design-4-e1691604684505.png 476w, {theme_url}assets/wp-content/uploads/2023/08/Untitled-design-4-e1691604684505-300x221.png 300w"
-                                                    sizes="(max-width: 476px) 100vw, 476px" />
+                                                <img width="476" height="350" src="{base_url}upload/{logo}"
+                                                    class="attachment-full size-full wp-image-38" alt="" />
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-2d9317b elementor-widget elementor-widget-heading"
@@ -10017,8 +9933,7 @@ flexibility(document.documentElement);
                                             data-settings="{&quot;success_message&quot;:&quot;Submission successful&quot;,&quot;error_message&quot;:&quot;Submission failed&quot;,&quot;button_width&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:100,&quot;sizes&quot;:[]},&quot;button_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;button_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_content_layout&quot;:&quot;vertical&quot;}"
                                             data-widget_type="wpr-form-builder.default">
                                             <div class="elementor-widget-container">
-                                                <form class="wpr-form" method="post" name="New Form" page="Home"
-                                                    page_id="7" novalidate>
+                                                <form class="submit-enquiry-form">
 
                                                     <div class="wpr-step-wrap"></div>
                                                     <div class="wpr-form-fields-wrap wpr-labels-">
@@ -10027,14 +9942,14 @@ flexibility(document.documentElement);
                                                             <label for="form-field-name"
                                                                 class="wpr-form-field-label wpr-hidden-element">
                                                                 Name </label>
-                                                            <input size="1 " type="text" name="form_fields[name]"
+                                                            <input size="1 " type="text" name="name"
                                                                 id="form-field-name"
                                                                 class="wpr-form-field  wpr-form-field-textual"
                                                                 placeholder="Name">
                                                         </div>
                                                         <div
                                                             class="wpr-form-field-type-number wpr-field-group wpr-column wpr-field-group-aa5c079 elementor-repeater-item-aa5c079 wpr-form-field-required">
-                                                            <input size="1 " type="number" name="form_fields[aa5c079]"
+                                                            <input size="1 " type="number" name="mobile"
                                                                 id="form-field-aa5c079"
                                                                 class="wpr-form-field  wpr-form-field-textual"
                                                                 placeholder="Phone No." required="required"
@@ -10045,15 +9960,15 @@ flexibility(document.documentElement);
                                                             <label for="form-field-f6d110c"
                                                                 class="wpr-form-field-label wpr-hidden-element">
                                                                 Service </label>
-                                                            <input size="1 " type="text" name="form_fields[f6d110c]"
+                                                            <input size="1 " type="text" name="message"
                                                                 id="form-field-f6d110c"
                                                                 class="wpr-form-field  wpr-form-field-textual"
                                                                 placeholder="Message">
                                                         </div>
-                                                        <div class="wpr-field-group wpr-stp-btns-wrap wpr-column wpr-form-field-type-submit"
-                                                            data-actions="[&quot;email&quot;]" data-redirect-url=""
-                                                            data-mailchimp-fields="{&quot;email_field&quot;:&quot;&quot;,&quot;first_name_field&quot;:&quot;&quot;,&quot;last_name_field&quot;:&quot;&quot;,&quot;address_field&quot;:&quot;&quot;,&quot;phone_field&quot;:&quot;&quot;,&quot;birthday_field&quot;:&quot;&quot;,&quot;group_id&quot;:&quot;&quot;}"
-                                                            data-list-id=""> <button type="submit" class="wpr-button">
+                                                        <div
+                                                            class="wpr-field-group wpr-stp-btns-wrap wpr-column wpr-form-field-type-submit">
+
+                                                            <button type="button" class="wpr-button mine-popup">
                                                                 <span>
                                                                     <span>Send</span>
                                                                 </span>
@@ -10201,7 +10116,10 @@ flexibility(document.documentElement);
     <script data-cfasync="false"
         src="{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/js/frontend.mind110.js?ver=1.3.972"
         id="wpr-addons-js-js"></script>
-
+    <!-- <script src="https://mrjohnnycare.in/wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.min.js?ver=1.3.972" id="wpr-modal-popups-js-js"></script> -->
+    <script
+        src="{theme_url}assets/wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.mind110.js?ver=1.3.972"
+        id="wpr-modal-popups-js-js"></script>
 
 </body>
 

@@ -188,6 +188,7 @@ class Website extends Ajax_Controller
             'status',
             $this->db->insert('contact_us_action', $this->input->post())
         );
+        $this->session->set_userdata('enquiry_form',true);
 
     }
     function add_center()

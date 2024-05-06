@@ -131,8 +131,9 @@ if ($isPrimary) {
     </section>
     <?php
 } else {
-    ?>
 
+    if(!isset($is_unique_page)):
+    ?>
     <section
         class="elementor-section elementor-top-section elementor-element elementor-element-d84c627 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
         data-id="d84c627" data-element_type="section"
@@ -187,7 +188,7 @@ if ($isPrimary) {
         </div>
     </section>
     <?php
-
+    endif;
 
 }
 

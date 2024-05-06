@@ -46,15 +46,18 @@ if (myeditor.length) {
             xhr.send(formData);
         },
         branding: false,
-        plugins: ' importcss  preview   importcss  searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists  wordcount   help    charmap   quickbars  emoticons  ',
+        plugins: ' importcss template preview   importcss  searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists  wordcount   help    charmap   quickbars  emoticons  ',
         //   tinydrive_token_provider: 'URL_TO_YOUR_TOKEN_PROVIDER',
         //   tinydrive_dropbox_app_key: 'YOUR_DROPBOX_APP_KEY',
         //   tinydrive_google_drive_key: 'YOUR_GOOGLE_DRIVE_KEY',
         //   tinydrive_google_drive_client_id: 'YOUR_GOOGLE_DRIVE_CLIENT_ID',
         mobile: {
-            plugins: ' preview   importcss  searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists  wordcount   help   charmap  quickbars  emoticons '
+            plugins: ' preview template  importcss  searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists  wordcount   help   charmap  quickbars  emoticons '
         },
-        // content_css: MYEditorCss,
+        content_css: typeof CONTENT_CSS === 'undefined' ? CONTENT_CSS : [],
+        templates: typeof all_templates === 'undefined' ? all_templates : [],
+        template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+        template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
         menu: {
             tc: {
                 title: 'Comments',
@@ -106,7 +109,7 @@ if (myeditor.length) {
             { title: 'Bootstrap class', value: 'table table-bordered table-striped table-hover' },
         ],
         importcss_append: true,
-        templates: all_templates,
+        // templates: all_templates,
         height: 600,
         image_caption: true,
         quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
@@ -709,7 +712,7 @@ const isValidWallet = () => {
     return true;
 }
 const low_balance_message = () => {
-    SwalWarning('Uh oh!','Your wallet balance is running low.');
+    SwalWarning('Uh oh!', 'Your wallet balance is running low.');
 }
 document.addEventListener('DOMContentLoaded', loadSomeFuncation);
 // loadSomeFuncation();

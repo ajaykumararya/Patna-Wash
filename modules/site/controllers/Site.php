@@ -20,7 +20,7 @@ class Site extends Site_Controller
     {
         $data = $this->pageData;
         $return = ['page_name' => $data['label'], 'content' => '', 'isPrimary' => (DefaultPage == $data['id'])];
-      
+
         $pageSchema = $this->SiteModel->get_page_schema($data['id']);
         if ($pageSchema->num_rows()) {
             $html = '';
@@ -55,6 +55,13 @@ class Site extends Site_Controller
                     case 'form':
                         $html .= $this->parse('form/' . $page->event_id, [], true);
                         break;
+                    case 'locate_us':
+                        $this->set_data('is_unique_page', true);
+                        if (file_exists(THEME_PATH . 'pages/locate_us' . EXT))
+                            $html .= $this->parse('pages/locate_us', [
+                                'type' => $page->event_id
+                            ], true);
+                        break;
                 }
             }
             // exit;
@@ -74,8 +81,9 @@ class Site extends Site_Controller
         $this->render($content, 'content');
         // pre($this->public_data,true);
     }
-    function test(){
+    function test()
+    {
         $year = '2024';
-        echo str_pad(9,3,'0',STR_PAD_LEFT);
+        echo str_pad(9, 3, '0', STR_PAD_LEFT);
     }
 }

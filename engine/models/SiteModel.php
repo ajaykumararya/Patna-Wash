@@ -19,16 +19,19 @@ class SiteModel extends MY_Model
         $this->db->where($where);
         return $this->db->get('district');
     }
-    function get_state($where){
+    function get_state($where)
+    {
         $this->db->where($where);
         return $this->db->get('state');
     }
 
-    function city($id){
-        return $this->db->where('DISTRICT_ID',$id)->get('district')->row('DISTRICT_NAME');
+    function city($id)
+    {
+        return $this->db->where('DISTRICT_ID', $id)->get('district')->row('DISTRICT_NAME');
     }
-    function state($id){
-        return $this->db->where('STATE_ID',$id)->get('state')->row('STATE_NAME');
+    function state($id)
+    {
+        return $this->db->where('STATE_ID', $id)->get('state')->row('STATE_NAME');
     }
     function list_page()
     {
@@ -53,12 +56,12 @@ class SiteModel extends MY_Model
             $thisRef['parent'] = $data->parent_id;
             $thisRef['type'] = start_with('http', $data->link) ? 'link' : 'page';
             $thisRef['label'] = $data->page_name;
-            $thisRef['link'] = ((DefaultPage == $data->id) ? base_url() : (start_with($data->link,'http') ? $data->link : base_url($data->link)));
+            $thisRef['link'] = ((DefaultPage == $data->id) ? base_url() : (start_with($data->link, 'http') ? $data->link : base_url($data->link)));
             $thisRef['id'] = $data->id;
             $thisRef['target'] = $data->redirection ? 'target="_blank"' : '';
-            $thisRef['isActive'] = (!empty(uri_string()) AND !start_with($data->link, 'http')) ? (uri_string() === $data->link) : (DefaultPage == $data->id && empty(uri_string()));
+            $thisRef['isActive'] = (!empty(uri_string()) and !start_with($data->link, 'http')) ? (uri_string() === $data->link) : (DefaultPage == $data->id && empty(uri_string()));
             $allPages[$thisRef['link']] = $thisRef;
-            if($data->isMenu){
+            if ($data->isMenu) {
                 if ($data->parent_id == 0)
                     $items[$data->id] = &$thisRef;
                 else
@@ -158,7 +161,8 @@ class SiteModel extends MY_Model
     function get_setting($type = '', $return = '', $json_decode = false)
     {
         if ($type) {
-            $get = $this->db->get_where('settings', ['type' => $type]);
+            $where = is_array($type) ? $type : (is_string($type) ? ['type' => $type] : ['id' => $type]);
+            $get = $this->db->get_where('settings', $where);
             if ($get->num_rows()) {
                 $data = $get->row('value');
                 if ($json_decode)
@@ -213,7 +217,10 @@ class SiteModel extends MY_Model
         return $this->db->get('contact_us_action');
     }
 
-    function get_contents($type){
-        return $this->db->where('type',$type)->get('content');
+    function get_contents($type)
+    {
+        $where = is_array($type) ? $type : (is_string($type) ? ['type' => $type] : ['id' => $type]);
+
+        return $this->db->where($where)->get('content');
     }
 }

@@ -675,6 +675,7 @@
 <script>
     var base_url = "<?= base_url() ?>",
         ajax_url = base_url + 'ajax/';
+    const CONTENT_CSS = <?=json_encode(get_css())?>;
     const login_type = '<?= $this->center_model->login_type() ?>';
     const all_templates = '';
     const wallet_system = Boolean(`<?=CHECK_PERMISSION('WALLET_SYSTEM')?>`);

@@ -80,18 +80,15 @@ if (!function_exists('recursiveArraySearch')) {
         }
         return false; // Value not found in the array
     }
-
 }
 function label($msg, $class = 'info')
 {
     return '<label class="badge badge-' . $class . '">' . $msg . '</label>';
 }
-
 function sidebar_toggle($true, $false = '')
 {
     return isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_state"] === "on" ? $true : $false;
 }
-
 function OnlyForAdmin()
 {
     $ci = &get_instance();
@@ -105,27 +102,59 @@ function pre($array = [], $flg = false)
     if ($flg)
         exit;
 }
-
-
 function CHECK_PERMISSION($type)
 {
     return defined($type) ? constant($type) === 'yes' : false;
 }
-
-
+function get_css()
+{
+    $ci = get_instance();
+    $html = '';
+    $theme = PATH;
+    $headerLinks = FCPATH . "themes/$theme/_common/head.php";
+    if (file_exists($headerLinks)) {
+        $html = file_get_contents($headerLinks);
+        // exit($html);
+        $linkers = [];
+        $document = new DOMDocument;
+        $document->strictErrorChecking = false;
+        $document->recover = true;
+        $document->loadHTML($html);
+        $links = $document->getElementsByTagName('link');
+        //Array that will contain our extracted links.
+        $extractedLinks = array();
+        foreach ($links as $link) {
+            //Get the link in the href attribute.
+            $linkHref = $link->getAttribute('href');
+          
+            //If the link is empty, skip it and don't
+            //add it to our $extractedLinks array
+            if (strlen(trim($linkHref)) == 0) {
+                continue;
+            }
+            //Skip if it is a hashtag / anchor link.
+            if ($linkHref[0] == '#') {
+                continue;
+            }
+            $lnk = str_replace('{theme_url}', theme_url(), $linkHref); //starts_with($linkHref, '{_theme_url_}') ? str_replace('{$linkHref : theme_assets().$linkHref;
+            $linkers[] = $lnk;
+        }
+        return $linkers;
+        // pre($linkers);
+        // $html = implode(',', $linkers);
+    } 
+    return [];
+}
 function getRadomNumber($n = 10)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randomString = '';
-
     for ($i = 0; $i < $n; $i++) {
         $index = rand(0, strlen($characters) - 1);
         $randomString .= $characters[$index];
     }
-
     return $randomString;
 }
-
 function get_month($monthNumber, $dateIndex = 'F')
 {
     return date($dateIndex, mktime(0, 0, 0, $monthNumber, 1));
@@ -149,13 +178,11 @@ function ES($type, $defaultTExt = null)
         return $ci->SiteModel->get_setting($type, $defaultTExt);
     return $ci->SiteModel->get_setting($type);
 }
-
 function logo()
 {
     $ci = &get_instance();
     return base_url('upload/' . $ci->SiteModel->get_setting('logo'));
 }
-
 function cms_content_form($type)
 {
     return form_open_multipart('', [
@@ -178,13 +205,11 @@ function symbol($image, $class = '50px', $attr = [])
 function notice_board()
 {
     $ci = &get_instance();
-
     return $ci->parser->parse('pages/notice-board-page', [], true);
 }
 function inconPickerInput($inputName = '')
 {
     return '
-                
                 <div class="symbol symbol-50px border border-primary">
                     <div class="symbol-label fs-2 fw-semibold text-success"><i style="font-size:30px" id="IconPreview"></i></div>
                 </div>
@@ -198,53 +223,41 @@ function get_month_number($date)
 function generateCouponCode($length = 8)
 {
     $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     $charLength = strlen($characters);
-
     $couponCode = '';
-
     for ($i = 0; $i < $length; $i++) {
         $randomChar = $characters[rand(0, $charLength - 1)];
         $couponCode .= $randomChar;
     }
-
     return $couponCode;
 }
-
 function getTimeDifference($startDateTime, $endDateTime = true)
 {
     $start = new DateTime($startDateTime);
     $endDateTime = $endDateTime === true ? date('Y-m-d H:i:s') : $endDateTime;
     $end = new DateTime($endDateTime);
     $interval = $start->diff($end);
-
     $result = '';
     if ($interval->y > 0) {
         $result .= $interval->y . ' years ';
-    }
-    else if ($interval->m > 0) {
+    } else if ($interval->m > 0) {
         $result .= $interval->m . ' months ';
-    }
-    else     if ($interval->d > 0) {
+    } else if ($interval->d > 0) {
         $result .= $interval->d . ' days ';
-    }
-    else     if ($interval->h > 0) {
+    } else if ($interval->h > 0) {
         $result .= $interval->h . ' hours ';
-    }
-    else     if ($interval->i > 0) {
+    } else if ($interval->i > 0) {
         $result .= $interval->i . ' minutes ';
-    }
-    else     if ($interval->s > 0) {
+    } else if ($interval->s > 0) {
         $result .= $interval->s . ' seconds ';
     }
-
     if (empty($result)) {
         $result = '0 seconds';
     }
-
     return $result;
 }
-function convertStringToH2($string) {
+function convertStringToH2($string)
+{
     return "<h2>" . $string . "</h2>";
 }
 ?>

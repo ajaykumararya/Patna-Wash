@@ -14,7 +14,6 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Mobile</th>
-                            <th>Course Name</th>
                             <th>Message</th>
                             <th>Action</th>
                         </tr>
@@ -27,7 +26,6 @@
                                 <td>{name} {last_name}</td>
                                 <td>{email}</td>
                                 <td>{mobile}</td>
-                                <td>{course_name}</td>
                                 <td>{message}</td>
                                 <td>{id}</td>
                             </tr>

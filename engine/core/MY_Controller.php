@@ -251,6 +251,7 @@ class Site_Controller extends MY_Controller
     {
         parent::__construct();
         $this->set_data('link_css', $this->parse('_common/head', [], true));
+        // exit;
         $this->set_data('YEAR', date('Y'));
         $this->set_data('copyright', ' All right reserved designed by
         <img src="' . base_url('assets') . '/second.gif" style="height:23px">
